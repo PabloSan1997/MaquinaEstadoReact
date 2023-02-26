@@ -22,7 +22,13 @@
     width: fit-content;
     height: fit-content;
     margin: auto auto auto 2px;
+    display: flex;
+    flex-wrap: wrap;
 }
 .Tickets .Tickets-ticket .Tickets-passengers span{
     font-size: 1.5rem;
+}
+.Tickets .Tickets-ticket .Tickets-passengers .nombre{
+    margin:5px ;
+    max-width: 50%;
 }

@@ -6,10 +6,14 @@ import { StepsLayout } from './StepsLayout.jsx';
 import '../estilos/BaseLayout.css';
 function BaseLayout() {
     const [state, send] = useMachine(bookingMachine);
+    const cancelar = ()=>{
+      send('CANCELAR');
+    }
+    console.log(state.context);
   return (
     <div className='BaseLayout'>
-      <Nav />
-      <StepsLayout/>
+      <Nav state={state} cancelar={cancelar}/>
+      <StepsLayout state={state} send={send}/>
     </div>
   )
 }

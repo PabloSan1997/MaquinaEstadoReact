@@ -1,8 +1,21 @@
 import React from 'react'
 import '../estilos/Passengers.css';
-function Passengers() {
+function Passengers({send}) {
+  const [value, changeValue] = React.useState('');
+
+  const onChangeInput = (e) => {
+    changeValue(e.target.value);
+  }
+  const siguiente=()=>{
+    send('DONE');
+  }
+  const submit = (e) => {
+    e.preventDefault();
+    send('ADD', {newPassengers:value});
+    changeValue('');
+  }
   return (
-    <form  className='Passengers'>
+    <form  className='Passengers' onSubmit={submit}>
     <p className='Passengers-title title'>Agrega a las personas que van a volar ✈️</p>
     <input 
       id="name" 
@@ -10,6 +23,8 @@ function Passengers() {
       type="text" 
       placeholder='Escribe el nombre completo' 
       required 
+      value={value}
+      onChange={onChangeInput}
     />
     <div className='Passengers-buttons'>
       <button 
@@ -23,6 +38,7 @@ function Passengers() {
         className='Passenger-pay button'
         id="boton"
         type="button"
+        onClick={siguiente}
       >
         Ver mi ticket
       </button>
