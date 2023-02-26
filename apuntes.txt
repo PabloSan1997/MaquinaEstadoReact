@@ -1,0 +1,2 @@
+inculir xstate
+npm install xstate @xstate/react

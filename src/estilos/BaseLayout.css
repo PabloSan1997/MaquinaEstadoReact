@@ -1,0 +1,11 @@
+.BaseLayout{
+    background: rgba(225, 225, 255, 0.644);
+    width: 40%;
+    height: 250px;
+    margin:100px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 20px black;
+}
