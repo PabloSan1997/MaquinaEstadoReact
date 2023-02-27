@@ -11,9 +11,9 @@ function StepsLayout({state, send}){
   return (
     <div className='StepsLayout'>
      {ver('inicio')? <Welcome send={send}/>:null}
-     {ver('search')? <Search send={send} />:null}
-     {ver('passengers')? <Passengers send={send}/>:null}
-     {ver('ticket')? <Tickets send={send} state={state}/>:null}
+     {ver('search')? <Search send={send} state={state} />:null}
+     {ver('passengers')? <Passengers send={send} state={state}/>:null}
+     {ver('tickets')? <Tickets send={send} state={state}/>:null}
     </div>
   )
 }

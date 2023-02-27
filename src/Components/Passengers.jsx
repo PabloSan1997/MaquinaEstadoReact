@@ -1,6 +1,6 @@
 import React from 'react'
 import '../estilos/Passengers.css';
-function Passengers({send}) {
+function Passengers({send, state}) {
   const [value, changeValue] = React.useState('');
 
   const onChangeInput = (e) => {
@@ -12,6 +12,7 @@ function Passengers({send}) {
   const submit = (e) => {
     e.preventDefault();
     send('ADD', {newPassengers:value});
+    console.log(state.context);
     changeValue('');
   }
   return (

@@ -9,7 +9,6 @@ function BaseLayout() {
     const cancelar = ()=>{
       send('CANCELAR');
     }
-    console.log(state.context);
   return (
     <div className='BaseLayout'>
       <Nav state={state} cancelar={cancelar}/>
